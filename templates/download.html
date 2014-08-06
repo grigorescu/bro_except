@@ -1,0 +1,3 @@
+#fields	exemption_id	id_orig_h_net	id_resp_h_net	src_net	dst_net	id_orig_p	id_resp_p	p	note
+{% for exemption in data %}{{exemption.id}}	{{exemption.id_orig_h_net|default_if_none:"-"}}	{{exemption.id_resp_h_net|default_if_none:"-"}}	{{exemption.src_net|default_if_none:"-"}}	{{exemption.dst_net|default_if_none:"-"}}	{{exemption.id_orig_p|default_if_none:"-"}}	{{exemption.id_resp_p|default_if_none:"-"}}	{{exemption.p|default_if_none:"-"}}	{{exemption.note|default_if_none:"-"}}
+{% endfor %}
